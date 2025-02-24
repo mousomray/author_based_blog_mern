@@ -151,7 +151,7 @@ class BlogController {
             console.log("Comment data", commentData)
             const blog = await BlogModel.findById(id);
             blog.comments.push({ ...commentData, name: username, email: useremail, image: userimage });
-            blog.save()
+            await blog.save()
             res.status(201).json({
                 success: true,
                 message: "Comment added successfully",

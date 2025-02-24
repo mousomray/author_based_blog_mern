@@ -4,6 +4,7 @@ const CommentSchema = require('./comment');
 const BlogSchema = new mongoose.Schema({
     title: {
         type: String,
+        required: "Title is Required"
     },
     image: {
         type: String,
@@ -11,6 +12,7 @@ const BlogSchema = new mongoose.Schema({
     },
     description: {
         type: String,
+        required: "Description is Required"
     },
     authorId: {
         type: mongoose.Schema.Types.ObjectId,
